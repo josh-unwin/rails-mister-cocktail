@@ -33,7 +33,10 @@ def generateCocktails
     name = cocktail["strDrink"]
     imgurl =  cocktail["strDrinkThumb"]
     # ingredients = cocktail[strIngredient1, strIngredient2, strIngredient3]
-    new_cocktail = Cocktail.create(name: name, imgurl: imgurl)
+    new_cocktail = Cocktail.new(name: name)
+    new_cocktail.remote_photo_url = imgurl
+    new_cocktail.save
+
     puts new_cocktail
   end
   puts "Finished generating cocktails."

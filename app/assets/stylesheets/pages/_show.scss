@@ -1,0 +1,19 @@
+.cocktail-banner {
+  background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), asset-data-url("bar.jpg");
+  background-position: center;
+
+}
+
+.fa-plus {
+  font-size: 18px;
+}
+
+.cocktail-ingredients {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 8px;
+}
+
+.align-right {
+  text-align: right;
+}

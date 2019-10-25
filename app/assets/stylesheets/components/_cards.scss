@@ -3,7 +3,11 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 
-  &:hover {
+  a {
+    color: $gray;
+  }
+
+  a:hover {
     text-decoration: none;
   }
 }

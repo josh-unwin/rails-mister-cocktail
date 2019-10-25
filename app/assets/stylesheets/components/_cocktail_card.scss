@@ -1,7 +1,8 @@
 .cocktail-card {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
 
   a {
     color: grey;
@@ -12,7 +13,7 @@
   }
 
   &:hover {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
   }
 }
 
@@ -36,10 +37,11 @@
 
 
 .cocktail-card .cocktail-card-infos {
+  height: 88px;
   padding: 16px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   position: relative;
 }
 

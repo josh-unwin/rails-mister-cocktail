@@ -5,14 +5,19 @@
       <% @cocktails.each do |cocktail| %>
         <%= link_to cocktail_path(cocktail) do %>
           <div class="cocktail-card">
-            <img src=" <%= cocktail.imgurl %> " alt="">
+          <%= cl_image_tag cocktail.photo %>
               <div class="cocktail-card-infos">
                 <div>
                   <h2><%= cocktail.name %></h2>
-                  <% cocktail.doses.each do |dose| %>
-                    <p><%= dose.description %> - <%= dose.ingredient.name %></p>
+                  <% cocktail.doses.each_with_index do |dose, index| %>
+                    <% if index <= 1 %>
+                      <p><%= dose.description %>:   <%= dose.ingredient.name %></p>
+                    <% end %>
                   <% end %>
                 </div>
+                <% if cocktail.doses.length > 2 %>
+                  <p class="see_all">See all...</p>
+                <% end %>
               </div>
           </div>
           <% end %>
