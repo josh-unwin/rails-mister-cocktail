@@ -22,6 +22,12 @@
     font-size: 60px;
     text-align: center;
   }
+
+  .fa-chevron-down {
+    font-size: 30px;
+    color: white;
+    margin-top: 18px;
+  }
 }
 
 .fa-cocktail {
@@ -54,6 +60,7 @@
 .search {
   position: absolute;
   bottom: 40px;
+  text-align: center;
 
   .form-control {
     background: none;
@@ -73,3 +80,34 @@
     display: none;
   }
 }
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .fa-chevron-down {
+    display: none;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+// @media (min-width: 992px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
+// }
+
+// Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) {
+//   .cards {
+//     grid-template-columns: 1fr 1fr 1fr;
+//   }
