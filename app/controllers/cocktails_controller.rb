@@ -8,16 +8,25 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    @cocktail = Cocktail.new(cocktail_params)
+    cocktail = Cocktail.new(cocktail_params)
+    if cocktail.save
+      redirect_to root_path
+    else
+      render :new
+    end
   end
 
   def new
     @cocktail = Cocktail.new
   end
 
+  def search
+    @cocktail = Cocktail.where()
+  end
+
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:imgurl, :name)
+    params.require(:cocktail).permit(:photo, :name)
   end
 end
