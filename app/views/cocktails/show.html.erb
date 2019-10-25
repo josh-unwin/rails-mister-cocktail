@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-4">
+        <h1><%= @cocktail.name %></h1>
+        <img src=" <%= @cocktail.imgurl %> " alt="" width="300px">
+    </div>
+    <div class="col-8">
+      <h3>Ingredients</h3>
+      <% @cocktail.doses.each do |dose| %>
+        <p><%= dose.description %> - <%= dose.ingredient.name %></p>
+        <%= link_to cocktail_dose_path([@cocktail, dose]), method: :delete do %>
+          <i class="fas fa-trash"></i>
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+    <%= link_to new_cocktail_dose_path(@cocktail) do %>
+      <li class="btn btn-secondary">Add an ingredient</li>
+    <% end %>
+  </div>
+</div>
