@@ -1,9 +1,11 @@
-
-<div class="flex-column flex-md-row py-3">
-    <h3><%= link_to "Cocktails logger", cocktails_path %></h3>
+<div class="sidebar">
+    <%= link_to cocktails_path do %>
+    <h3>Cocktail Mixer</h3>
+      <i class="fas fa-cocktail"></i>
+    <% end %>
   <ul class="inline my-0">
     <%= link_to new_cocktail_path do %>
       <li class="btn btn-secondary">Add new cocktail</li>
     <% end %>
   </ul>
-</header>
+</div>
