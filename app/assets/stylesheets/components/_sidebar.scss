@@ -50,3 +50,26 @@
     background-color: $josh-third;
   }
 }
+
+.search {
+  position: absolute;
+  bottom: 40px;
+
+  .form-control {
+    background: none;
+    border-radius: 14px;
+    color: white;
+    }
+
+    .form-control:focus {
+      outline: none !important;
+    }
+
+    .form-control::placeholder {
+      color: $josh-third;
+    }
+
+  .search-submit {
+    display: none;
+  }
+}
