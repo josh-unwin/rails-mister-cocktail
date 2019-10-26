@@ -1,0 +1,22 @@
+<div class="row reviews">
+  <div class="col-12"><h3>Reviews</h3></div>
+    <div class="col-4">
+      <h4>Leave a review</h4>
+      <%= simple_form_for [@cocktail, @review] do |f| %>
+        <%= f.input :rating %>
+        <%= f.input :content, label: "Tell us what you think" %>
+        <%= f.submit "Leave review", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+    <div class="col-8">
+      <% if @cocktail.reviews.empty? %>
+        <p>No reviews yet! Be the first!</p>
+
+        <% else %>
+          <% @cocktail.reviews.each do |review| %>
+          <%= review.content  %>
+          <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
